@@ -29,11 +29,13 @@ export default defineConfig({
           ]
         }
       ],
-      '/SpringBoot/4.x/': [
+      '/SpringBoot/3.x/': [
         {
-          text: 'SpringBoot 4.x',
+          text: 'SpringBoot 3.x',
           items: [
-            { text: 'Index', link: '/SpringBoot/' },
+            { text: '简介', link: '/SpringBoot/3.x/' },
+            { text: '1-创建项目', link: '/SpringBoot/3.x/1-创建项目' },
+            { text: '2-接口开发', link: '/SpringBoot/3.x/2-接口开发' },
             { text: 'One', link: '/guide/one' },
             { text: 'Two', link: '/guide/two' }
           ]
