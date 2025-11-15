@@ -4,7 +4,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Gnerv | Li Gen",
   description: "A VitePress Site",
+  lang: 'zh-CN',
   themeConfig: {
+    search: {
+      provider: 'local'
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
@@ -33,7 +37,7 @@ export default defineConfig({
         {
           text: 'SpringBoot 3.x',
           items: [
-            { text: '简介', link: '/SpringBoot/3.x/' },
+            { text: '0-简介', link: '/SpringBoot/3.x/' },
             { text: '1-创建项目', link: '/SpringBoot/3.x/1-创建项目' },
             { text: '2-接口开发', link: '/SpringBoot/3.x/2-接口开发' },
             { text: 'One', link: '/guide/one' },
@@ -42,7 +46,9 @@ export default defineConfig({
         }
       ]
     },
-
+    outline: {
+      label: "页面导航"
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
