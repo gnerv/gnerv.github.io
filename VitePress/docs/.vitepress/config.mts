@@ -2,81 +2,82 @@ import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar';
 
 // https://vitepress.dev/reference/site-config
-const vitePressOptions = {
-  title: "Gnerv | Li Gen",
+const vitePressOptions = ({
+  title: "Li Gen 的小站",
   description: "A VitePress Site",
-  lang: 'zh-CN',
   themeConfig: {
-    search: {
-      provider: 'local'
-    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: 'Spring Boot', link: '/springboot' },
+      { text: '指南', link: '/' },
+      {
+        text: '资源',
+        items: [
+          { text: '3.x', link: '/springboot/30.3x版本/' },
+          { text: '4.x', link: '/springboot/40.4x版本/' }
+        ]
+      },
       {
         text: 'Spring Boot',
         items: [
-          { text: 'SpringBoot 3.x', link: '/springboot/3.x/' },
-          { text: 'SpringBoot 4.x', link: '/springboot/4.x/' }
+          { text: '3.x', link: '/springboot/30.3x版本/' },
+          { text: '4.x', link: '/springboot/40.4x版本/' }
         ]
       },
       {
         text: '笔记',
         items: [
-          {text: 'Maven', link: '/note/maven'},
-          {text: 'Nodejs', link: '/note/nodejs'}
+          { text: 'Maven', link: '/note/maven/' },
+          { text: 'Nodejs', link: '/note/nodejs/' },
         ]
-      },
-      { text: 'Examples', link: '/markdown-examples' }
+      }
     ],
-
-    sidebar: {
-      '/springboot/': [
-        {
-          text: 'SpringBoot',
-          items: [
-            { text: '3.x', link: '/springboot/3.x/' },
-            { text: '4.x', link: '/springboot/4.x/' }
-          ]
-        }
-      ],
-      '/springboot/3.x/': [
-        {
-          text: 'SpringBoot 3.x',
-          items: [
-            { text: '0-简介', link: '/springboot/3.x/' },
-            { text: '1-创建项目', link: '/springboot/3.x/1-创建项目' },
-            { text: '2-接口开发', link: '/springboot/3.x/2-接口开发' },
-            { text: 'One', link: '/guide/one' },
-            { text: 'Two', link: '/guide/two' }
-          ]
-        }
-      ]
-    },
-    outline: {
-      label: "页面导航"
-    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    ],
+    search: {
+      provider: 'local'
+    },
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2019 Li Gen'
+    }
   }
-}
+})
+
 
 const vitePressSidebarOptions = [
-    {
-      documentRootPath: 'docs',
-      scanStartPath: 'guide',
-      basePath: '/guide/',
-      resolvePath: '/guide/',
-      useTitleFromFileHeading: true
-    },
-    {
-      documentRootPath: 'docs',
-      scanStartPath: '/note/maven',
-      resolvePath: '/',
-      useTitleFromFrontmatter: true
-    }
-  ]
+  {
+    // VitePress Sidebar's options here...
+    documentRootPath: '/docs',
+    collapsed: false,
+    capitalizeFirst: true
+  },
+  {
+    documentRootPath: '/docs',
+    scanStartPath: 'springboot',
+    resolvePath: '/springboot/'
+  },
+  {
+    documentRootPath: '/docs',
+    scanStartPath: 'springboot/30.3x版本',
+    resolvePath: '/springboot/30.3x版本/'
+  },
+  {
+    documentRootPath: '/docs',
+    scanStartPath: 'springboot/30.3x版本',
+    resolvePath: '/springboot/40.4x版本/'
+  },
+  {
+    documentRootPath: '/docs',
+    scanStartPath: 'note/maven',
+    resolvePath: '/note/maven/'
+  },
+  {
+    documentRootPath: '/docs',
+    scanStartPath: 'note/nodejs',
+    resolvePath: '/note/nodejs/'
+  }
+]
 
 export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions));

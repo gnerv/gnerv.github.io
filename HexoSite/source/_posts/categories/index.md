@@ -6,13 +6,10 @@ hero:
   name: "Gnerv | Li Gen"
   text: "这是一个技术研究教程站点"
   tagline: 为了部落！！！
-  image:
-      src: /public/1-创建项目/image.png
-      alt: VitePress
+
 features:
   - title: Spring Boot
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    link: /springboot
   - title: Spring Cloud
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Mybatis
@@ -31,6 +28,5 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Linux命令
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-
 ---
 

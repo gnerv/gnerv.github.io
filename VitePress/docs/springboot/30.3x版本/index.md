@@ -5,7 +5,3 @@
 - Maven: 3.9+
 - Spring Boot: 3.x
 - IDE: idea
-
-## 目录
-- [1-创建项目](1-创建项目.md)
-- [text](2-接口开发.md)

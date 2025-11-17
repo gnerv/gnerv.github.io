@@ -1,0 +1,4 @@
+---
+layout: Blog
+sidebar: false
+---

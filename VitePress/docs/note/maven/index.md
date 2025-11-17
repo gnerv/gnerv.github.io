@@ -1,5 +1,2 @@
-<script setup>
-import ArticleList from './ArticleList.vue'
-</script>
+# Maven 研究教程
 
-<ArticleList />
