@@ -1,0 +1,133 @@
+version: 5.1.0
+variant: default
+logo:
+    text: Li Gen @ Site
+head:
+    favicon: /img/favicon.svg
+    meta:
+        # Meta tag specified in <attribute>=<value> style
+        # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
+        - ''
+navbar:
+    menu:
+        首页: /
+        归档: /archives
+        栏目: 
+            a: /categories
+            b: /categories
+        标签: /tags
+        关于: /about
+    # Links to be shown on the right of the navigation bar
+    links:
+        Download on GitHub:
+            icon: fab fa-github
+            url: https://gitee.com/gnerv_admin
+
+article:
+    # Code highlight settings
+    highlight:
+        # Code highlight themes
+        # https://github.com/highlightjs/highlight.js/tree/master/src/styles
+        theme: atom-one-light
+        # Show copy code button
+        clipboard: true
+        # Default folding status of the code blocks. Can be "", "folded", "unfolded"
+        fold: unfolded
+search:
+    type: insight
+    # Whether to include pages in the search results
+    index_pages: true
+
+sidebar:
+    left:
+        sticky: false
+    right:
+        sticky: false
+widgets:
+    -
+        position: left
+        type: profile
+        author: Li Gen
+        author_title: Li Gen @ Site
+        location: BeiJing
+        avatar: 
+        avatar_rounded: false
+        gravatar: 
+        # URL or path for the follow button
+        follow_link: https://gitee.com/gnerv_admin
+        # Links to be shown on the bottom of the profile widget
+        social_links:
+            Github:
+                icon: fab fa-github
+                url: https://gitee.com/gnerv_admin
+    -
+        position: left
+        type: toc
+        index: true
+        collapsed: true
+        depth: 3
+    -
+        position: left
+        type: categories
+    -
+        position: left
+        type: recent_posts
+    -
+        position: left
+        type: archives
+    -
+        position: left
+        type: tags
+        order_by: name
+        amount: 
+        show_count: true
+
+# Plugin configurations
+# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
+plugins:
+    # 访问统计
+    busuanzi: true
+    # Show the "back to top" button
+    back_to_top: true
+
+    # Enable page startup animations
+    animejs: true
+    # Alerting users about the use of cookies
+    # https://www.osano.com/cookieconsent/
+    cookie_consent:
+        # The compliance type. Can be "info", "opt-in", or "opt-out"
+        type: info
+        # Theme of the popup. Can be "block", "edgeless", or "classic"
+        theme: edgeless
+        # Whether the popup should stay static regardless of the page scrolls
+        static: false
+        # Where on the screen the consent popup should display
+        position: bottom-left
+        # URL to your site's cookie policy
+        policyLink: https://www.cookiesandyou.com/
+    # Enable the lightGallery and Justified Gallery plugins
+    gallery: true
+
+    # Enable the KaTeX math typesetting support
+    # https://katex.org/
+    katex: false
+    # Enable the MathJax math typesetting support
+    # https://www.mathjax.org/
+    mathjax: false
+    # Enable the Outdated Browser plugin
+    # http://outdatedbrowser.com/
+    outdated_browser: false
+    # Enable PJAX
+    pjax: true
+    # Show a progress bar at top of the page on page loading
+    progressbar: true
+
+# CDN provider settings
+# https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
+providers:
+    # Name or URL template of the JavaScript and/or stylesheet CDN provider
+    cdn: jsdelivr
+    # Name or URL template of the webfont CDN provider
+    fontcdn: google
+    # Name or URL of the fontawesome icon font CDN provider
+    iconcdn: fontawesome
