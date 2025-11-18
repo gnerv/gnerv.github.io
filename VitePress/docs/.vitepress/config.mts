@@ -17,26 +17,17 @@ const vitePressOptions = ({
           { text: '4.x', link: '/springboot/40.4x版本/' }
         ]
       },
-      {
-        text: 'Spring Boot',
-        items: [
-          { text: '3.x', link: '/springboot/30.3x版本/' },
-          { text: '4.x', link: '/springboot/40.4x版本/' }
-        ]
-      },
-      {
-        text: '笔记',
-        items: [
-          { text: 'Maven', link: '/note/maven/' },
-          { text: 'Nodejs', link: '/note/nodejs/' },
-        ]
-      }
+      { text: 'Spring Boot', link: '/springboot/' },
+      { text: '笔记', link: '/note/' },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ],
     search: {
       provider: 'local'
+    },
+    outline: {
+      label: '页面导航'
     },
     footer: {
       message: 'Released under the MIT License.',
@@ -55,6 +46,11 @@ const vitePressSidebarOptions = [
   },
   {
     documentRootPath: '/docs',
+    scanStartPath: 'note',
+    resolvePath: '/note/'
+  },
+  {
+    documentRootPath: '/docs',
     scanStartPath: 'springboot',
     resolvePath: '/springboot/'
   },
@@ -68,16 +64,6 @@ const vitePressSidebarOptions = [
     scanStartPath: 'springboot/30.3x版本',
     resolvePath: '/springboot/40.4x版本/'
   },
-  {
-    documentRootPath: '/docs',
-    scanStartPath: 'note/maven',
-    resolvePath: '/note/maven/'
-  },
-  {
-    documentRootPath: '/docs',
-    scanStartPath: 'note/nodejs',
-    resolvePath: '/note/nodejs/'
-  }
 ]
 
 export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions));
