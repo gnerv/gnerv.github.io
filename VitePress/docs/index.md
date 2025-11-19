@@ -7,7 +7,7 @@ hero:
   text: "这是一个技术研究教程站点"
   tagline: 为了部落！！！
   image:
-      src: /public/1-创建项目/image.png
+      src: /image.png
       alt: VitePress
 features:
   - title: Spring Boot

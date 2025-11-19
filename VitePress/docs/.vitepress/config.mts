@@ -9,7 +9,7 @@ const vitePressOptions = ({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '指南', link: '/' },
+      { text: '指南', link: '/guide/' },
       {
         text: '资源',
         items: [
@@ -33,9 +33,8 @@ const vitePressOptions = ({
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2019 Li Gen'
     }
-  }
+  },
 })
-
 
 const vitePressSidebarOptions = [
   {
@@ -43,6 +42,11 @@ const vitePressSidebarOptions = [
     documentRootPath: '/docs',
     collapsed: false,
     capitalizeFirst: true
+  },
+  {
+    documentRootPath: '/docs',
+    scanStartPath: 'guide',
+    resolvePath: '/guide/'
   },
   {
     documentRootPath: '/docs',

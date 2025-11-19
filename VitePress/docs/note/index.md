@@ -1,4 +1,5 @@
 ---
-layout: Blog
-sidebar: false
+title: 笔记
 ---
+
+# 笔记
