@@ -21,8 +21,10 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Docker
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /guide/docker
   - title: RabbitMQ
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /guide/rabbitmq
   - title: Kafka
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Elastic Search
