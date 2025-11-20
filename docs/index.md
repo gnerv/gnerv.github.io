@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Gnerv | Li Gen"
-  text: "这是一个技术研究教程站点"
+  name: "Li Gen 的小站"
+  text: "这是一个技术研究小站"
   tagline: 为了部落！！！
   image:
       src: /image.png
